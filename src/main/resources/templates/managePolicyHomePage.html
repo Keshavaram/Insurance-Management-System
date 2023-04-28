@@ -1,0 +1,79 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Insurance Management System</title>
+</head>
+<style>
+	a:link, a:visited {
+		color: black;
+		text-decoration: none;
+		cursor: auto;
+	}
+	a:hover
+	{
+		cursor: pointer;
+	}
+	a:link:active, a:visited:active {
+		color: black;
+	}
+	.button_container
+	{
+		width: 100% !important;
+		display: inline-flex !important;
+		justify-content: space-evenly !important;
+		align-items: center !important;
+		padding: 1%;
+	}
+</style>
+<body>
+<div>
+	<table>
+		<tr>
+			<div class="col-sm-5" align="center">
+				<div class="panel-body" align="center">
+					<table class="table">
+						<thead class="thead-dark">
+						<tr>
+							<th>Policy ID</th>
+							<th>Policy-holder</th>
+							<th>Premium</th>
+							<th>Policy-type</th>
+							<th>Edit</th>
+							<th>Delete</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="insurance : ${listOfInsurance }">
+							<td th:text="${insurance.policyId}">Policy ID</td>
+							<td th:text="${insurance.policyHolderName}">Policy-holder</td>
+							<td th:text="${insurance.premium}">Premium</td>
+							<td th:text="${insurance.policyType}">Policy-type</td>
+							<td>
+								<a style="color: blue" th:href="@{'/edit/' + ${insurance.policyId}}">Edit</a>
+							</td>
+							<td>
+								<a style="color: blue" th:href="@{'/delete/' + ${insurance.policyId}}">Delete</a>
+							</td>
+						</tr>
+
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</tr>
+	</table>
+	<div class="button_container">
+		<button class="btn btn-primary">
+			<a th:href="@{'/new'}">Add new</a>
+		</button>
+		<button class="btn btn-primary">
+			<a th:href="@{'/search'}">Search for a Policy</a>
+		</button>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #FFFFFF;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 100px;
+      margin-bottom: 50px;
+      letter-spacing: 3px;
+      animation-name: fadeIn;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+    }
+
+    p {
+      font-size: 30px;
+      margin-bottom: 50px;
+      animation-name: slideIn;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-timing-function: ease-out;
+    }
+
+    .block {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      background-color: #333333;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #5CC9F5;
+      color: #FFFFFF;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #FFFFFF;
+      color: #5CC9F5;
+    }
+
+    a {
+      color: #5CC9F5;
+      text-decoration: none;
+      border-bottom: 2px solid #5CC9F5;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      border-bottom-color: #FFFFFF;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>Dashboard</h1>
+<div class="block">
+  <button onclick="location.href='/logout'">Logout</button>
+</div>
+</body>
+</html>

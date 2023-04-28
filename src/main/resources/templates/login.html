@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Rare Jake Insurance Company</title>
+  <style>
+    body {
+      background-color: #171717;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 1.2em;
+    }
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeInDown 1s ease;
+    }
+    form {
+      margin: 50px auto;
+      width: 50%;
+      padding: 30px;
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      animation: fadeInUp 1s ease;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+    input[type="text"], input[type="password"] {
+      display: block;
+      margin-top: 10px;
+      padding: 5px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+      background-color: #2b2b2b;
+      color: #fff;
+    }
+    button[type="submit"] {
+      display: block;
+      margin-top: 30px;
+      background-color: #3bb3e0;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #fff;
+      color: #3bb3e0;
+      border: 2px solid #3bb3e0;
+    }
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>Login</h1>
+<form method="post" action="/login">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button type="submit">Login</button>
+</form>
+</body>
+</html>

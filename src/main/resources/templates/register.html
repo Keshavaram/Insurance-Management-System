@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rare Jake Insurance Company - Register</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #171717;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 1.2em;
+    }
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeInDown 1s ease;
+    }
+    form {
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeInUp 1s ease;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: none;
+      background-color: #2b2b2b;
+      color: #fff;
+    }
+    button[type=submit] {
+      background-color: #3bb3e0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    button[type=submit]:hover {
+      background-color: #fff;
+      color: #3bb3e0;
+      border: 2px solid #3bb3e0;
+    }
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>Register</h1>
+<form method="post" action="/register">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button type="submit">Register</button>
+</form>
+</body>
+</html>

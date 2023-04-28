@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rare Jake</title>
+    <style>
+        body {
+            background-color: #171717;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeInDown 1s ease;
+        }
+        p {
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+        a {
+            color: #3bb3e0;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: #fff;
+            background-color: #3bb3e0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3bb3e0;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 50px;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #fff;
+            color: #3bb3e0;
+            border: 2px solid #3bb3e0;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Rare Jake Insurance Company</h1>
+
+<div style="text-align:center">
+    <a href="/login" class="btn">Login</a>
+    <a href="/register" class="btn">Register</a>
+</div>
+</body>
+</html>

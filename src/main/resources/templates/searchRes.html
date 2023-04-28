@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Search</title>
+</head>
+<body>
+<div>
+	<table>
+		<tr>
+			<div class="col-sm-5">
+				<div class="panel-body">
+					<table class="table">
+						<thead class="thead-dark">
+						<tr>
+							<th>Policy ID</th>
+							<th>Policy-holder</th>
+							<th>Premium</th>
+							<th>Policy-type</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="insurance : ${searchResults }">
+							<td th:text="${insurance.policyId}">Policy ID</td>
+							<td th:text="${insurance.policyHolderName}">Policy-holder</td>
+							<td th:text="${insurance.premium}">Premium</td>
+							<td th:text="${insurance.policyType}">Policy-type</td>
+						</tr>
+
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+		</tr>
+	</table>
+</div>
+</div>
+</body>
+</html>

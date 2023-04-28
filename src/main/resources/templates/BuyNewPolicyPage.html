@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Buy a Policy</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align="center">
+	<h1>Buy a new policy</h1>
+	<br/>
+	<div class="col-sm-4">
+		<form action="#" th:action="@{/save}" th:object="${insurance}" method="post">
+			<table>
+				<div alight="left">
+					<tr>
+						<td>
+							<label for="name" class="form-label">Name</label>
+							<input type="hidden" th:field="*{policyId}"/>
+							<input id="name" type="text" th:field="*{policyHolderName}" class="form-control" placeholder="Name"/>
+						</td>
+					</tr>
+				</div>
+
+				<div alight="left">
+
+					<tr>
+						<td>
+							<label for="amt" class="form-label">Premium</label>
+							<input id="amt" type="text" th:field="*{premium}" class="form-control" placeholder="Premium"/>
+						</td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<td>
+							<label for="type" class="form-label">PolicyType</label>
+							<input id="type" type="text" th:field="*{policyType}" class="form-control" placeholder="PolicyType"/>
+						</td>
+					</tr>
+				</div>
+				<br>
+				<tr>
+					<td colspan="2">
+						<button type="submit" class="btn btn-info">Save</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+</body>
+</html>
